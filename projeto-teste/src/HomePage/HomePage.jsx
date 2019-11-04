@@ -56,8 +56,9 @@ class HomePage extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            {currentUser.role == "Admin" &&
+                        {lstLembrete.map((tempLembrete, index) =>
+                            <tr>
+                                {currentUser.role == "Admin" &&
                                 <td>
                                     <center>
                                         <a>
@@ -69,32 +70,12 @@ class HomePage extends React.Component {
                                     </center>
                                 </td>
                             }
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            {currentUser.role == "Admin" &&
-                                <td>
-                                    <center>
-                                        <a>
-                                            <i class="material-icons" style={{ color: 'blue' }}>edit</i>
-                                        </a>
-                                        <a>
-                                            <i class="material-icons" style={{ color: 'red' }}>delete</i>
-                                        </a>
-                                    </center>
-                                </td>
-                            }
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        
-                        
-
+                            <td>{tempLembrete.nome}</td>
+                            <td>{tempLembrete.descricao}</td>
+                            <td>{tempLembrete.data}</td>
+                            <td>{tempLembrete.hora}</td>
+                            </tr>
+                        )};
                     </tbody>
                 </table>
             </div>
