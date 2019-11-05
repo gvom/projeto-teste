@@ -11,7 +11,7 @@ class HomePage extends React.Component {
         this.state = {
             currentUser: authenticationService.currentUserValue,
             userFromApi: null,
-            lstLembrete: null
+            lstLembrete: authenticationService.getAll()
         };
 
     }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using WebApi.Models;
 using Api.Configuration;
 using Api.Interface;
+using System;
 
 namespace WebApi.Controllers
 {
@@ -24,6 +25,7 @@ namespace WebApi.Controllers
         [HttpPost("Autenticar")]
         public IActionResult Autenticar([FromBody]AutenticacaoUsuarioModel model)
         {
+            Console.WriteLine("oi");
             var user = _userService.Autenticar(model.Nome, model.Senha);
 
             if (user == null)

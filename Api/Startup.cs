@@ -43,8 +43,6 @@ namespace WebApi
 
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-            Console.WriteLine("ver oq esta chegando");
-            Console.WriteLine(appSettings.Secret);
             
             services.AddAuthentication(x =>
             {
